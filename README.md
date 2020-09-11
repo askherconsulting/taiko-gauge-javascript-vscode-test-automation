@@ -1,2 +1,4 @@
-# taiko-gauge-javascript-vscode-test-automation
- 
+```
+npm install
+npm test
+```

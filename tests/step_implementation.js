@@ -18,7 +18,7 @@ beforeScenario(async() => await openBrowser({args: [
         '--no-zygote']}
 ));
 
-gauge.screenshotFn = async function () {
+gauge.customScreenshotWriter = async function () {
     return await screenshot({encoding: "base64"});
 };
 

@@ -1,4 +1,5 @@
-'use strict';
+'use fn strict';
+/*jshint esversion: 6 */
 const {
     link, comboBox,inputField,text,$
 } = require('taiko');

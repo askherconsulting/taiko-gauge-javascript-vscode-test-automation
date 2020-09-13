@@ -12,12 +12,6 @@ Logo
 ----
 * Display the Gauge logo
 
-Get Started
------------
-* Go to Gauge get started page
-* Click on Quick Install
-* Check "npm install -g @getgauge/cli" exists
-
 Documentation
 -------------
 * Go to Gauge documentation page

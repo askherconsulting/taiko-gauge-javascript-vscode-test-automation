@@ -6,4 +6,4 @@
 * Click "M"
 * Click "Add to cart"
 * Alert "Checkout - Subtotal: $ 29.45" and await accept
-* Click "Checkout"
+* Alert "OK" and await accept

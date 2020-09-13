@@ -1,9 +1,10 @@
-'use strict';
+'use fn strict';
+/*jshint esversion: 8 */
 const assert = require('assert');
 var _path = require('path');
 const {
     browser, page, openBrowser, closeBrowser, goto, reload, $, link, listItem,
-    inputField, fileField, textField, image, button, comboBox, checkBox, radioButton, alert,
+    inputField, fileField, image, button, checkBox, radioButton, alert,
     prompt, confirm, beforeunload, text, click, doubleClick, rightClick, write, press,
     attach, highlight, focus, scrollTo, scrollRight, scrollLeft, scrollUp, scrollDown,
     hover, screenshot, timeoutSecs, intervalSecs, waitForNavigation, to, into, dismiss, accept,intercept
@@ -26,7 +27,7 @@ afterScenario(async() => await closeBrowser());
 
 step('Navigate to <url>', async url => 
 {
-    await goto(url)
+    await goto(url);
 });
 
 step('Navigate to <url> with timeout <timeout> ms', async (url,timeout) => await goto(url,{timeout:timeout}));
@@ -79,13 +80,6 @@ step('Display the IDE plugins', async() => {
     assert.ok(await link('Visual Studio Code').exists());
 });
 
-step('Combo Box', async() => {
-    const box = comboBox('Cars');
-    assert.ok(await box.exists());
-    await box.select('Saab');
-    assert.equal(await box.value(), 'saab');
-});
-
 step('Check Box', async() => {
     const box = checkBox('Vehicle');
     assert.ok(await box.exists());
@@ -104,14 +98,6 @@ step('Attach file', async() => {
     const field = fileField('File');
     await attach('file.txt', to(field));
     assert.ok((await field.value()).endsWith('file.txt'));
-});
-
-step('Text Field', async() => {
-    await focus('Username');
-    await write('Gopher', into('Username'));
-    const field = textField('Username');
-    assert.ok(await field.exists());
-    assert.equal(await field.value(), 'Gopher');
 });
 
 step('Scroll', async() => {
@@ -148,14 +134,14 @@ step("Intercept Google Analytics", async function() {
 });
 
 step("Respond to <url> with <respomnseBody>", async function(url, respomnseBody) {
-	await intercept(url, {body: respomnseBody })
+	await intercept(url, {body: respomnseBody });
 });
 
 step("Respond to <url> with json <jsonString>", async function(url, jsonString) {
-	await intercept(url, {body: JSON.parse(jsonString) })
+	await intercept(url, {body: JSON.parse(jsonString) });
 });
 
 step("Navigate to relative path <relativePath>", async function(relativePath) {
-    var absolutePath = _path.resolve(relativePath)
-    await goto("file:///"+absolutePath)
+    var absolutePath = _path.resolve(relativePath);
+    await goto("file:///"+absolutePath);
 });

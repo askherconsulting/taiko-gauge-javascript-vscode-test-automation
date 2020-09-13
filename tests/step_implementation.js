@@ -4,7 +4,7 @@ const assert = require('assert');
 var _path = require('path');
 const {
     browser, page, openBrowser, closeBrowser, goto, reload, $, link, listItem,
-    inputField, fileField, image, button, checkBox, radioButton, alert,
+    fileField, image, button, checkBox, radioButton, alert,
     prompt, confirm, beforeunload, text, click, doubleClick, rightClick, write, press,
     attach, highlight, focus, scrollTo, scrollRight, scrollLeft, scrollUp, scrollDown,
     hover, screenshot, timeoutSecs, intervalSecs, waitForNavigation, to, into, dismiss, accept,intercept
@@ -63,7 +63,7 @@ step('Display the language plugins', async() => {
 });
 
 step('Search for Hooks', async() => {
-    const field = inputField({'placeholder': 'Search Docs'});
+    const field = Field({'placeholder': 'Search Docs'});
     await write('Hooks', into(field),{delay:100});
     assert.equal(await field.value(), 'Hooks');
     await press('Enter');

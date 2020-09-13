@@ -3,10 +3,10 @@
 
 * Intercept Google Analytics
 * Navigate to "https://gauge.org"
-* Click link "Insights" below 
+* Click link "Privacy" below 
 
-   |Type|Selector       |
-   |----|---------------|
+   |Type|Selector      |
+   |----|--------------|
    |link|Gauge Commands|
 
 ## Above

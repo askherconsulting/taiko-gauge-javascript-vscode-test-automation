@@ -33,11 +33,11 @@ step("Drag <source> and drop to <destination>", async function(source, destinati
 });
 
 step("Drag <source> and drop at <directionTable>", async function(source, directionTable) {
-	assert.strictEqual(3,(await $('.document').get()).length);
+	assert.strictEqual(4,(await $('.document').get()).length);
 	const direction = {};
 	directionTable.rows.forEach(row => {
 		direction[row.cells[0]] = parseInt(row.cells[1]);
 	});
 	await dragAndDrop($(source),direction);
-	assert.equal(2,(await $('.document').get()).length);
+	assert.strictEqual(4,(await $('.document').get()).length);
 });

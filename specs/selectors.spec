@@ -17,9 +17,9 @@ tags: knownIssue
 * Navigate to "google.com"
 * Click "I'm Feeling Lucky"
 * Click "About"
-* Select "हिन्दी" of Combo Box near 
+* Select "हिन्दी" of Text Box near 
 
    |Type      |Selector             |
    |----------|---------------------|
-   |inputField|{"id":"searchinput"}|
+   |textBox   |{"id":"searchinput"}|
 * Click "Doodles संग्रह"

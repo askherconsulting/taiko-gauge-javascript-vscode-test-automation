@@ -18,8 +18,8 @@ function getElementWithSelector(element,selector){
         case "link":
             selectedElement = link(selectedItem);
             break;
-        case "inputField":
-            selectedElement = inputField(selectedItem);
+        case "textBox":
+            selectedElement = textBox(selectedItem);
             break;
         case "text":
             selectedElement = text(selectedItem);

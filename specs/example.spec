@@ -23,7 +23,6 @@ Plugins
 
 IDE Plugins
 -----------
-* Go to Gauge documentation page
 * Go to plugins page
 * Click on IDE plugins
 * Display the IDE plugins

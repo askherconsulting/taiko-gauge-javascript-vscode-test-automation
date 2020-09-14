@@ -2,12 +2,13 @@
 /*jshint esversion: 8 */
 const assert = require('assert');
 var _path = require('path');
+
 const {
     browser, page, openBrowser, closeBrowser, goto, reload, $, link, listItem,
     fileField, image, button, checkBox, radioButton, alert,
     prompt, confirm, beforeunload, text, click, doubleClick, rightClick, write, press,
     attach, highlight, focus, scrollTo, scrollRight, scrollLeft, scrollUp, scrollDown,
-    hover, screenshot, timeoutSecs, intervalSecs, waitForNavigation, to, into, dismiss, accept,intercept
+    hover, screenshot, retryInterval,timeoutSecs, intervalSecs, waitForNavigation, to, into, dismiss, accept,intercept
 } = require('taiko');
 
 beforeScenario(async() => await openBrowser({args: [ 
@@ -45,17 +46,10 @@ step('Go to Gauge documentation page', async() => await click($(`//*[text()='Doc
 step('Display quick start', async() => assert.ok(await text('quick start').exists()));
 
 step('Go to plugins page', async() => {
-    assert.ok(await link('Get Started').exists());
-    assert.ok(await link(text('Get Started')).exists());
-    assert.ok(await $(`//a[contains(text(),'Get Started')]`).exists());
-
-    await hover('Get Started');
     await click('Plugins');
 });
 
 step('Display the language plugins', async() => {
-    assert.ok(await text('Plugins').exists(intervalSecs(1), timeoutSecs(10)));
-
     assert.ok(await text('Java Runner').exists());
     await highlight(text('Java Runner'));
 
@@ -72,7 +66,7 @@ step('Search for Hooks', async() => {
 
 step('Click on IDE plugins', async() => {
     assert.ok(await listItem('IDE Plugins').exists());
-    assert.ok(await click('IDE Plugins'));
+    await click('IDE Plugins');
 });
 
 step('Display the IDE plugins', async() => {

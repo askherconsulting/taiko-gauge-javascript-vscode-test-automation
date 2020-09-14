@@ -4,12 +4,7 @@
 * Intercept Google Analytics
 * Navigate to "https://gauge.org/index.html"
 * Click link "Documentation"
-* Focus 
-
-   |Type      |Selector       |
-   |----------|---------------|
-   |inputField|{"id":"search"}|
-* Write "Custom"
+* Search for Custom
 * Click an element that contains "Taking"
 
 ## Id

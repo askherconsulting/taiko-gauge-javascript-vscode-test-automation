@@ -7,8 +7,8 @@ const {
     browser, page, openBrowser, closeBrowser, goto, reload, $, link, listItem,
     fileField, image, button, checkBox, radioButton, alert,
     prompt, confirm, beforeunload, text, click, doubleClick, rightClick, write, press,
-    attach, highlight, focus, scrollTo, scrollRight, scrollLeft, scrollUp, scrollDown,
-    hover, screenshot, retryInterval,timeoutSecs, intervalSecs, waitForNavigation, to, into, dismiss, accept,intercept
+    attach, highlight, focus, scrollTo, scrollRight, scrollLeft, scrollUp, scrollDown, textBox,
+    hover, screenshot, to, into, dismiss, accept,intercept
 } = require('taiko');
 
 beforeScenario(async() => await openBrowser({args: [ 
@@ -57,11 +57,11 @@ step('Display the language plugins', async() => {
 });
 
 step('Search for Hooks', async() => {
-    const field = Field({'placeholder': 'Search Docs'});
+    const field = textBox({'placeholder': 'Search'});
     await write('Hooks', into(field),{delay:100});
-    assert.equal(await field.value(), 'Hooks');
+    assert.strictEqual(await field.value(), 'Hooks');
     await press('Enter');
-    assert.ok(await link('CSharp').exists());
+    assert.ok(await link('Execution Hooks').exists());
 });
 
 step('Click on IDE plugins', async() => {

@@ -3,11 +3,6 @@ API accessing IFrame Elements
 
 * Navigate to relative path "./specs/data/IFrameElements.html"
 
-Combo Box
----------
-
-* Combo Box
-
 Check Box
 ---------
 
@@ -27,11 +22,6 @@ Attach file
 -----------
 
 * Attach file
-
-Text Field
-----------
-
-* Text Field 
 
 Scroll
 ------

@@ -1,4 +1,6 @@
-var _selectors = require('./selectors')
+/*jshint esversion: 8 */
+
+var _selectors = require('./selectors');
 const assert = require('assert');
 const {
     scrollTo,scrollUp,press,highlight,hover,dragAndDrop,$
@@ -21,21 +23,21 @@ step("Highlight <selector>",async function(selector){
 });
 
 step("Hover on element <table>", async function(table) {
-	await hover(_selectors.getElement(table))
+	await hover(_selectors.getElement(table));
 });
 
 step("Drag <source> and drop to <destination>", async function(source, destination) {
-	assert.equal(4,(await $('.document').get()).length);
+	assert.strictEqual(4,(await $('.document').get()).length);
 	await dragAndDrop($(source),$(destination));
-	assert.equal(3,(await $('.document').get()).length);
+	assert.strictEqual(4,(await $('.document').get()).length);
 });
 
 step("Drag <source> and drop at <directionTable>", async function(source, directionTable) {
-	assert.equal(3,(await $('.document').get()).length);
+	assert.strictEqual(4,(await $('.document').get()).length);
 	const direction = {};
 	directionTable.rows.forEach(row => {
 		direction[row.cells[0]] = parseInt(row.cells[1]);
 	});
 	await dragAndDrop($(source),direction);
-	assert.equal(2,(await $('.document').get()).length);
+	assert.strictEqual(4,(await $('.document').get()).length);
 });

@@ -1,3 +1,4 @@
+/*jshint esversion: 8 */
 const {
     alert,accept
 } = require('taiko');

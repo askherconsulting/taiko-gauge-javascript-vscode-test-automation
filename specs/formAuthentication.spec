@@ -5,8 +5,6 @@
 
 ## Login with invalid data
 
-
-
 |username|password|
 |--------|--------|
 |x       |y       |

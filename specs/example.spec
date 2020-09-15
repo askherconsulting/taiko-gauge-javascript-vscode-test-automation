@@ -1,5 +1,4 @@
-Getting Started with Gauge
-==========================
+# Getting Started with Gauge
 
 This is an executable specification file. This file follows markdown syntax. Every heading in this file denotes a scenario. Every bulleted point denotes a step.
 To execute this specification, use
@@ -8,26 +7,26 @@ To execute this specification, use
 * Intercept Google Analytics
 * Navigate to "https://gauge.org"
 
-Logo
-----
+## Logo
+
 * Display the Gauge logo
 
-Documentation
--------------
+## Documentation
+
 * Go to Gauge documentation page
 
-Plugins
--------
+## Plugins
+
 * Go to plugins page
 * Display the language plugins
 
-IDE Plugins
------------
+## IDE Plugins
+
 * Go to plugins page
 * Click on IDE plugins
 * Display the IDE plugins
 
-Documentation Search
---------------------
+## Documentation Search
+
 * Go to Gauge documentation page
 * Search for Hooks

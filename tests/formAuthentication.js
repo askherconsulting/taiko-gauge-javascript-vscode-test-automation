@@ -10,9 +10,9 @@ const {
     text
 } = require('taiko');
 
-step("Login as <user> user with password <password>", async (user1, password1) =>{
-    await write(user1, into(textBox({id: "username" })));
-    await write(password1, into(textBox({id: "password" }))); 
+step("Login as <username> user with password <password>", async (username, password) =>{
+    await write(username, into(textBox({id: "username" })));
+    await write(password, into(textBox({id: "password" }))); 
     await press('Enter');
     assert.ok(await text('Login Page').exists());
 });

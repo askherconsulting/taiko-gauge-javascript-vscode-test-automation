@@ -1,13 +1,17 @@
 
 # Form Authentication
 
-* Navigate to "http://the-internet.herokuapp.com/login"
+* Navigate to "https://the-internet.herokuapp.com/login" with timeout "10000" ms
 
 ## Login with invalid data
 
-* Login as "user" user with password "password"
 
 
+|username|password|
+|--------|--------|
+|x       |y       |
+
+* Login as <username> user with password <password>
 
 
 

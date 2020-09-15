@@ -1,3 +1,5 @@
+/*jshint esversion: 8 */
+
 const {
     switchTo,openTab,closeTab,reload,goto
 } = require('taiko');
@@ -20,7 +22,7 @@ step("Open Tab <arg0> with timeout <time>", async function(url, time) {
 });
 
 step("Close Tab", async function() {
-	await closeTab()
+	await closeTab();
 });
 
 step("Reload the page", async function() {
@@ -28,5 +30,5 @@ step("Reload the page", async function() {
 });
 
 step("Navigate to file with relative Path <filePath>", async function(filePath) {
-	await goto("file:///"+cwd+filePath)
+	await goto("file:///"+cwd+filePath);
 });

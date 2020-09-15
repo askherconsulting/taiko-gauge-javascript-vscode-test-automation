@@ -1,6 +1,7 @@
-'use strict';
+'use fn strict';
+/*jshint esversion: 8 */
 const assert = require('assert');
-var _selectors = require('./selectors')
+var _selectors = require('./selectors');
 
 const {
     link, click,below,image,above,toRightOf,toLeftOf,button,rightClick
@@ -48,5 +49,5 @@ step("Click button <selector>", async function(selector) {
 });
 
 step("Right click <table>", async function(table) {
-    await rightClick(_selectors.getElement(table))
+    await rightClick(_selectors.getElement(table));
 });

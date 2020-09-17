@@ -94,6 +94,10 @@ step('Attach file', async() => {
     assert.ok((await field.value()).endsWith('file.txt'));
 });
 
+step('Text Field', async() => {
+    assert.ok(await text('Last name:').exists());
+});
+
 step('Scroll', async() => {
     await scrollTo($('#myDIV'));
 

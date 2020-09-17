@@ -14,7 +14,6 @@
 
 ## With object as a response body
 * Respond to "https://docs.gauge.org/writing-specifications.html" with json "{\"name\":\"Jon\",\"age\":\"20\"}"
-
 * Navigate to "https://docs.gauge.org"
 * Click an element that contains "Write Specifications"
 * Assert text "{\"name\":\"Jon\",\"age\":\"20\"}" exists on the page.

@@ -12,12 +12,15 @@
 
 ## Radio Button without for
 
-tags: knownIssue
 * Radio Button "Y"
 
 ## Attach file
 
 * Attach file
+
+## Text Field
+
+* Text Field
 
 ##Scroll
 
@@ -26,3 +29,4 @@ tags: knownIssue
 ## Alert
 
 * Alert
+

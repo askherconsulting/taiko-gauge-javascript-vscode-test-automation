@@ -5,7 +5,7 @@
 * Navigate to "https://gauge.org/index.html"
 * Click link "Documentation"
 * Search for Custom
-* Click an element that contains "Taking"
+* Click an element that contains "Gauge"
 
 ## Shadow DOM
 
